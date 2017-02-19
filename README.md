@@ -1,4 +1,4 @@
-This is project 5 of Udacity self-driving car nanodegree. The goal is to detect and track cars on video stream.
+This is my solution to project 5 of Udacity self-driving car nanodegree. The goal is to detect and track cars on video stream.
 
 Code:
 - All commented code can be found at vehicle-detection-and-tracking-v2.ipynb jupyter notebook.
