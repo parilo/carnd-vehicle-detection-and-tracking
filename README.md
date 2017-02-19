@@ -1,3 +1,5 @@
+[![Vehicle detection and tracking](http://img.youtube.com/vi/W8TCPlMTOyY/0.jpg)](https://www.youtube.com/watch?v=W8TCPlMTOyY)
+
 This is my solution to project 5 of Udacity self-driving car nanodegree. The goal is to detect and track cars on video stream.
 
 Code:
@@ -115,7 +117,7 @@ Here you can see examples of algorithm results. Overlapping by hotboxes shown as
 
 # Video processing
 
-Same average boxes algorithm may be used to estimate cars base on last several frames of the video. We just need to accumulate hot boxes over number of last frames and then apply same algorithm here with higher threshold. See example of processed video at begining of the description.
+Same average boxes algorithm may be used to estimate cars base on last several frames of the video. We just need to accumulate hot boxes over number of last frames and then apply same algorithm here with higher threshold. See example of processed video at begining of the description. With described pipeline I get about 4 frames per second performance.
 
 # Conclusion
 
