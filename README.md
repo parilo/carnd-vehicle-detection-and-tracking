@@ -23,7 +23,7 @@ Project code consist of following steps:
 
 In this project I use two datasets. First is project dataset. It is splitted into [cars images](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles.zip) and [non-car images](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles.zip). Here is examples of dataset images:
 
-![default dataset images] (https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/default-dataset.png)
+![default dataset images](https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/default-dataset.png)
 
 After playing with original dataset I found that it has bias towards black cars. Autti dataset solved this problem for me along with increasing performance of the classifier. I augment original dataset with 10000 car images and 40000 non-car images from Autti. By changing proportion of original and Autti dataset images in training samples you may fine tune classifier performance.
 You may get Autti dataset from [here](https://github.com/udacity/self-driving-car/tree/master/annotations). This dataset contains of road images with labeled cars, pedestrians and other road participants. So it is needed to extract car and non-car images from original images. Here is examples of Autti dataset cars and non-cars.
