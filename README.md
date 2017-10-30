@@ -28,7 +28,7 @@ In this project I use two datasets. First is project dataset. It is splitted int
 After playing with original dataset I found that it has bias towards black cars. Autti dataset solved this problem for me along with increasing performance of the classifier. I augment original dataset with 10000 car images and 40000 non-car images from Autti. By changing proportion of original and Autti dataset images in training samples you may fine tune classifier performance.
 You may get Autti dataset from [here](https://github.com/udacity/self-driving-car/tree/master/annotations). This dataset contains of road images with labeled cars, pedestrians and other road participants. So it is needed to extract car and non-car images from original images. Here is examples of Autti dataset cars and non-cars.
 
-![autti dataset images] (https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/autti-dataset.png)
+![autti dataset images](https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/autti-dataset.png)
 
 # Histogram of Oriented Gradients (HOG)
 
@@ -49,7 +49,7 @@ hog_feat = True # HOG features on or off
 
 Here is examples of my HOG features
 
-![used hog featues] (https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/hog.png)
+![used hog featues](https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/hog.png)
 
 # SVM classifier
 
@@ -59,7 +59,7 @@ I decided to use SVM classifier with rbf kernel and default sklearn parameters. 
 
 For searching cars in an input image I use sliding window technics. It means that I iterate over image area that could contain cars with approximately car sized box and try to classify whether box contain car or not. As cars may be of different sizes due to distance from a camera we need a several amount of box sizes for near and far cars. I use 3 square sliding window sizes of 128, 96 and 80 pixels side size. While iterating I use 50% window overlapping in horizontal and vertical directions. Here is an examples of sliding windows lattices which I use. One of sliding window drawn in blue on each image while rest of the lattice are drawn in black. For computational economy and additional robustness areas of sliding windows don't conver whole image but places where cars appearance is more probable.
 
-![sliding window lattice] (https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/sliding-windows.png)
+![sliding window lattice](https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/sliding-windows.png)
 
 # Estimation of car positions and sizes
 
@@ -113,7 +113,7 @@ boxes it was joined to. Based on this we may estimate average boxes size and pos
 I use thresholding by average boxes strength to filter out false positives.
 Here you can see examples of algorithm results. Overlapping by hotboxes shown as heat map where each pixel holds number of overlapped hot boxes.
 
-![average boxes examples] (https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/one-image-detection-examples.png)
+![average boxes examples](https://github.com/parilo/carnd-vehicle-detection-and-tracking/blob/master/one-image-detection-examples.png)
 
 # Video processing
 
